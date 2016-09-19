@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Virtual Roads</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+</head>
+<body>
+	<div class='search-box'><input type='text' id='to' /></div> <!-- LOCATION INPUT -->
+	<video autoplay="true" id="camera"></video> <!-- Actual AR box-->
+	<canvas id="overlay"></canvas>
+  	
+	<!-- JQuery --> <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script> 
+	<!-- ThreeJS --> <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js" integrity="sha256-/AKnHXEmo4fJ1xZhpvxmh/PRv1eqIRAGdBSvqiPuhTw=" crossorigin="anonymous"></script>
+	<!-- Emscripted ARToolkit --> <script src="https://raw.githubusercontent.com/artoolkit/jsartoolkit5/f7a0e8b4c2d6a52e783a1c847e53c733ce99ada8/build/artoolkit.min.js"></script>
+	<!-- ARToolkit/ThreeJS --> <script src="https://raw.githubusercontent.com/artoolkit/jsartoolkit5/f7a0e8b4c2d6a52e783a1c847e53c733ce99ada8/js/artoolkit.three.js"></script>
+	<!-- Optical Flow --> <script src="https://rawgit.com/cchan/oflow/1a5710e65ea0b7a9d1fa85371809120aed1e7d5f/dist/oflow.js"></script>
+	<!-- Awe.JS --> <script src="https://raw.githubusercontent.com/buildar/awe.js/master/js/awe-v8.js"></script>
+	<!-- Compass.JS --> <script src="https://ai.github.io/compass.js/compass.js"></script>
+	<script>
+		Compass.watch(function (heading) {
+		  $('#to').val(heading);
+		});
+	</script>
+	<script src="geo.js"></script>
+	<script src="camera.js"></script>
+	<!--<script src="maps.js"></script>-->
+	<script src="artk.js"></script>
+	<!-- Maps API --> 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfvQr_Z4eE2BKUxYE-u6tIt9GV_yhoIj8&libraries=places&callback=initAutocomplete" async defer></script>
+</body>
+</html>

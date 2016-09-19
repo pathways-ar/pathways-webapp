@@ -1,0 +1,67 @@
+body {
+
+     background: black top right no-repeat;
+     margin: 0;
+    
+}   
+
+/* Augmented Reality- access from camera*/
+
+#camera {
+   position: relative;
+    height:100%;
+    width: 100%;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+
+}
+/* Box where you can enter location*/
+
+.search-box{
+    position: relative;
+    top: 50px;
+    left: 7px;
+    z-index: 100000;
+    width: 300px;
+    margin: 0 auto;
+    opacity: 0.7;
+    font-size: 45px;
+    //border: 0.5px ridge #DCDCDC;
+    border-radius: 15px;
+
+
+}
+
+.search-box input[type=text] {
+      text-align: center;
+    
+}
+/* overlay of arrow or cube*/
+
+.foreground{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 20
+
+
+}
+
+#to{
+    padding: 15px;
+    border-radius: 10px;
+    width:85%;
+    border: 1px solid #EEE;
+    font-size: 23px;
+}
+
+canvas#overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+}

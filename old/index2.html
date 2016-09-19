@@ -1,0 +1,93 @@
+
+<!--
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Directions</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
+    <script src="https://rawgit.com/argonjs/samples/gh-pages/code/resources/lib/CSS3DArgonHUD.js"></script>
+    <script src="https://rawgit.com/argonjs/argon/master/dist/argon.min.js"></script>
+    <script src="c3ahud.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfvQr_Z4eE2BKUxYE-u6tIt9GV_yhoIj8&libraries=places&callback=initAutocomplete"
+         async defer></script>
+    <style>
+      #description {
+        pointer-events:auto;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        padding: 10px;
+        background-color:rgba(255,255,255,0.7);
+        -webkit-backdrop-filter: blur(5px);
+        position:absolute;
+        bottom: 0px;
+      }
+      .argon-focus #description {
+        transition: opacity 0.8s;
+        visibility: visible;
+        opacity: 1; 
+      }
+      .argon-no-focus #description {
+        transition: visibility 0s linear 0.8s, opacity 0.8s;
+        visibility: visible;
+        opacity: 0;
+      }
+      .search-box{
+        position: fixed;
+        top:5px;
+        left:5px;
+        width:200px;
+        z-index: 100;
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+  <body onload='getLocation()'>
+    <div class='search-box'>
+      <table border='0'>
+        <tr><td>From: </td><td><input type='text' id='from' /></td></tr>
+        <tr><td>To: </td><td><input type='text' id='to' /></td></tr>
+      </table>
+    </div>
+    <div id="argon">
+      <div onclick="hideMe(this)" id="description" style='display:none;'>
+        <h2>Six directions in HTML</h2>
+        <h5>(click to dismiss)</h5>
+        <p>This example displays a directional reference frame around the camera in Cartesian coordinates, using the EastUpSouth orientation for positive (x, y, z). A userLocation geospatial entity is created and positioned at the position of the user, and updated when the user's position changes. It uses HTML elements to put a text label at 200 meters in each of the negative/positive directions: x is west/east; y is down/up; z is north/south.</p>  
+      </div>
+    </div>
+  	<script>
+  	/*global google, global navigator*/
+  	
+  	function initAutocomplete() {
+
+        // Create the search box and link it to the UI element.
+        var input = document.getElementById('to');
+        var searchBox = new google.maps.places.Autocomplete(input);
+
+        google.maps.event.addListener(searchBox, 'places_changed', function() {
+          var place = searchBox.getPlace();
+          alert(searchBox.getPlace().geometry.location);
+        });
+      }
+      
+      
+      
+    	function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.watchPosition(showPosition);
+        }else {
+          alert("Geolocation is not supported by this browser.");
+        }
+      }
+      function showPosition(position) {
+        alert("Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude); 
+      }
+  		function hideMe(elem) {
+  		    elem.style.display = 'none';
+  		}	
+  	</script>
+    <script src="app2.js"></script>
+  </body>
+</html>
+
+-->
