@@ -1,5 +1,7 @@
 # pathways
-HackTheNorth project - JS Webapp projecting augmented-reality Google Maps directions and locations onto your surroundings.
+Project for HackTheNorth 2016 ([on DevPost](http://devpost.com/software/pathways-ifbzkd)). By Clive Chan, Riya Walia, and Yash Mathur.
+
+A JavaScript Webapp projecting augmented-reality Google Maps directions, locations, and other information onto your surroundings.
 
 ## Inspiration
 We're 1A freshmen, and it's always hard getting around the new campus. Often, the tool of choice is Google Maps, but all it displays is a little blue dot in a sea of various buildings in shades of tan and grey. Instead of giving us the overhead view of the map, what if we could get our directions in a more natural way?
