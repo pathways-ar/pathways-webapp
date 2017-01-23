@@ -21,3 +21,5 @@ Accessing the camera and painting a canvas on top of it using getUserMedia() API
 
 ## What's next for Pathways
 We'd love to take this further in the future! Eventually we hope to take this to three dimensions. Eventually we may move to native app (rather than a webapp) allowing us greater speed, better phone hardware access, and tools like Unity. We'll also be reading up heavily on augmented reality algorithms and techniques, and try to use phone sensors to better detect orientation.
+
+You can access the final product as we presented on Hack The North here: https://hackthenorth-mathnerd3141.c9users.io/
