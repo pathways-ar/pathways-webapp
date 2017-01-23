@@ -1,4 +1,5 @@
 /*global navigator, MediaStreamTrack*/
+// Copyright of Riya Walia 
 
 //a variable video that selects the id of the element video 
 var video = document.getElementById("camera");
@@ -22,7 +23,7 @@ if (navigator.getUserMedia && MediaStreamTrack.getSources){
         );
     });
 }
-//If getUserMedia isn't supported in their browser, tell them.
+//If getUserMedia isn't supported in their browser, tell them to avoid changes. 
 else
     alert("We can't use your camera! Your browser doesn't support getUserMedia or MediaStreamTrack.");
 
